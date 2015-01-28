@@ -1,1 +1,31 @@
-<b>hi</b>
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Voxel Painter Admin</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  
+    <button class="btn-delete">Output Bulk Delete Command To JS Console</button>
+
+    <div id="critters-wrapper"></div>
+    
+    <script id="critters-list-template" type="text/x-handlebars-template">
+        <ul class="critters-list">
+            {{#each critters}}
+                <li class="critter-item">
+                    <a href="{{link}}">
+                        <img src="{{link}}" class="critter-img">
+                    </a>
+                    <p>{{name}}</p>
+                    Select: <input type="checkbox" data-id="{{id}}" data-rev="{{rev}}"></input>
+                <!-- </li> -->
+            {{/each}}
+        </ul>
+    </script>
+
+    <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
